@@ -3,11 +3,11 @@
   <title>江海大初学者的博客</title>
   
   
-  <link href="./atom.xml" rel="self"/>
+  <link href="/jhd.blog/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://17714574361.github.io/jhd.blog/"/>
   <updated>2018-12-24T14:16:32.496Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://17714574361.github.io/jhd.blog/</id>
   
   <author>
     <name>季晓东</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>dsaddsa</title>
-    <link href="http://yoursite.com/2018/12/24/dsad/"/>
-    <id>http://yoursite.com/2018/12/24/dsad/</id>
+    <link href="https://17714574361.github.io/jhd.blog/2018/12/24/dsad/"/>
+    <id>https://17714574361.github.io/jhd.blog/2018/12/24/dsad/</id>
     <published>2018-12-24T14:16:29.000Z</published>
     <updated>2018-12-24T14:16:32.496Z</updated>
     
@@ -40,8 +40,8 @@
   
   <entry>
     <title>hexo的配置</title>
-    <link href="http://yoursite.com/2018/12/24/hexo%E7%9A%84%E9%85%8D%E7%BD%AE/"/>
-    <id>http://yoursite.com/2018/12/24/hexo的配置/</id>
+    <link href="https://17714574361.github.io/jhd.blog/2018/12/24/hexo%E7%9A%84%E9%85%8D%E7%BD%AE/"/>
+    <id>https://17714574361.github.io/jhd.blog/2018/12/24/hexo的配置/</id>
     <published>2018-12-24T13:00:04.000Z</published>
     <updated>2018-12-24T13:20:35.782Z</updated>
     
@@ -56,12 +56,12 @@
     
     </summary>
     
-      <category term="云服务器" scheme="http://yoursite.com/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+      <category term="云服务器" scheme="https://17714574361.github.io/jhd.blog/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
-      <category term="centOS" scheme="http://yoursite.com/tags/centOS/"/>
+      <category term="centOS" scheme="https://17714574361.github.io/jhd.blog/tags/centOS/"/>
     
-      <category term="tomcat" scheme="http://yoursite.com/tags/tomcat/"/>
+      <category term="tomcat" scheme="https://17714574361.github.io/jhd.blog/tags/tomcat/"/>
     
   </entry>
   
