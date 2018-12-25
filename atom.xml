@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>江海大初学者的博客</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-12-24T14:16:32.496Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>季晓东</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>dsaddsa</title>
+    <link href="http://yoursite.com/2018/12/24/dsad/"/>
+    <id>http://yoursite.com/2018/12/24/dsad/</id>
+    <published>2018-12-24T14:16:29.000Z</published>
+    <updated>2018-12-24T14:16:32.496Z</updated>
+    
+    <content type="html"><![CDATA[<p>dasd</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;dasd&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>hexo的配置</title>
+    <link href="http://yoursite.com/2018/12/24/hexo%E7%9A%84%E9%85%8D%E7%BD%AE/"/>
+    <id>http://yoursite.com/2018/12/24/hexo的配置/</id>
+    <published>2018-12-24T13:00:04.000Z</published>
+    <updated>2018-12-24T13:20:35.782Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Hexo-NexT配置超炫网页效果"><a href="#Hexo-NexT配置超炫网页效果" class="headerlink" title="Hexo-NexT配置超炫网页效果"></a>Hexo-NexT配置超炫网页效果</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Hexo安装过后，默认的主题是landscape，如果不喜欢，我们也可以进行更换。本文主要讲解NexT主题的使用。先看下我博客网站的效果吧：blogwenbo.com</p><h2 id="Hexo主题相关网址"><a href="#Hexo主题相关网址" class="headerlink" title="Hexo主题相关网址"></a>Hexo主题相关网址</h2><ul><li>Hexo官网</li><li>Theme</li><li>NexT</li></ul><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul><li>NexT安装</li><li>切换主题</li><li>设置Menu</li><li>初始化对应的Menu文件夹</li><li>设置动态背景</li><li>在右上角或者左上角实现fork me on github</li><li>添加添加RSS</li><li>修改文章内链接文本样式</li><li>修改底部标签样式</li><li>在文章末尾添加“文章结束”标记</li><li>设置头像并设置动画效果</li><li>修改代码块<code></code>自定义样式</li><li>侧边栏社交小图标设置</li><li>主页文章添加阴影效果</li><li>网站底部加上访问量</li><li>添加热度</li><li>网站底部字数统计</li><li>设置网站的图标Favicon</li><li>实现文章统计功能</li><li>添加网页顶部进度加载条</li><li>添加来必力云跟帖功能</li><li>底部隐藏由Hexo强力驱动、主题–NexT.Mist</li><li>去掉底部重复字数统计</li><li>添加jiathis分享</li><li>博文置顶</li><li>修改字体大小</li><li>添加DaoVoice在线联系</li><li>添加底部桃心</li><li>添加侧栏推荐阅读</li><li>在文章底部增加版权信息</li><li>Hexo博客添加站内搜索</li><li>添加外链网易云音乐</li></ul><h2 id="NexT安装"><a href="#NexT安装" class="headerlink" title="NexT安装"></a>NexT安装</h2><ul><li>切换到Blog文件夹下（就是hexo init的文件夹），查看文件</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd [Blog]</span><br><span class="line"></span><br><span class="line">ls</span><br><span class="line">_config.yml node_modules    scaffolds   themes</span><br><span class="line">db.json     package.json    source</span><br></pre></td></tr></table></figure><ul><li><p>通过git安装，前提是你的电脑安装了git.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure></li><li><p>查看标签列表</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git tag -l</span><br><span class="line">输出：</span><br><span class="line">...</span><br><span class="line">v5.1.3</span><br><span class="line">v5.1.4</span><br></pre></td></tr></table></figure></li><li><p>切换到v5.1.4</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git checkout tags/v5.1.4</span><br><span class="line">输出：</span><br><span class="line">HEAD is now at 4f75fe5... 2018 NY update.</span><br></pre></td></tr></table></figure></li><li><p>切换成NexT主题，在hexo根文件夹下，编辑_config.yml文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">theme: next</span><br><span class="line"></span><br><span class="line">//切换后，用命令清除下缓存</span><br><span class="line">hexo clean</span><br><span class="line"></span><br><span class="line">//执行hexo s本地产看NexT主题效果</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure></li></ul><h2 id="切换主题"><a href="#切换主题" class="headerlink" title="切换主题"></a>切换主题</h2><ul><li>在列表中选择一款自己喜欢的主题风格。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Schemes</span><br><span class="line">scheme: Muse  //默认主题</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Hexo-NexT配置超炫网页效果&quot;&gt;&lt;a href=&quot;#Hexo-NexT配置超炫网页效果&quot; class=&quot;headerlink&quot; title=&quot;Hexo-NexT配置超炫网页效果&quot;&gt;&lt;/a&gt;Hexo-NexT配置超炫网页效果&lt;/h1&gt;&lt;h2 id=&quot;前言&quot;&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="云服务器" scheme="http://yoursite.com/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    
+      <category term="centOS" scheme="http://yoursite.com/tags/centOS/"/>
+    
+      <category term="tomcat" scheme="http://yoursite.com/tags/tomcat/"/>
+    
+  </entry>
+  
+</feed>
