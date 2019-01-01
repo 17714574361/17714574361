@@ -123,8 +123,7 @@
 <meta property="og:image" content="https://17714574361.github.io/jhd.blog/images/pasted-3.png">
 <meta property="og:image" content="https://17714574361.github.io/jhd.blog/images/pasted-2.png">
 <meta property="og:image" content="https://17714574361.github.io/jhd.blog/images/pasted-4.png">
-<meta property="og:image" content="https://17714574361.github.io/jhd.blog/images/pasted-5.png">
-<meta property="og:updated_time" content="2018-12-31T12:35:09.848Z">
+<meta property="og:updated_time" content="2019-01-01T05:56:16.711Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库原理与技术----基于sql server 2012期末复习">
 <meta name="twitter:description" content="数据库原理与技术—-基于sql server 2012期末复习关系代数交，并，差，除，笛卡尔积 除V➗W   找到V.A等于V.B相同的记录 找到这个相等条件所对应的其它对象其它  SQL语句 创建数据库school 123456789101112131415create database school on (	name=‘school’,	filename=‘e:\db\school.mdf’">
@@ -407,12 +406,24 @@
                 
               
 
-              <time title="Created: 2018-12-31 20:19:00 / Modified: 20:35:09" itemprop="dateCreated datePublished" datetime="2018-12-31T20:19:00+08:00">2018-12-31</time>
+              <time title="Created: 2018-12-31 20:19:00" itemprop="dateCreated datePublished" datetime="2018-12-31T20:19:00+08:00">2018-12-31</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-01 13:56:16" itemprop="dateModified" datetime="2019-01-01T13:56:16+08:00">2019-01-01</time>
               
             
           </span>
@@ -527,117 +538,36 @@
 <li><p>输出所有成绩高于该课程平均分的记录，且按课程号有序排列。 <code>`</code>   select * form score<br>group by 课程号<br>having 分数&gt;avg(分数)<br>order by 课程号 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">19. 用户刘明具有对三个表的所有权利，并具有给其他用户授权的权利</span><br></pre></td></tr></table></figure></p>
 </li>
 </ol>
-<p>grant all privileges on table student, course, sc to 刘明 with grant option<br><code>`</code></p>
-<h1 id="简答题"><a href="#简答题" class="headerlink" title="简答题"></a>简答题</h1><ol>
-<li>试述1NF、2NF、3NF 的概念。<ul>
-<li>1NF：每一个分量都是不可再分是数据项的关系模式属于第一范式。</li>
-<li>2NF：若关系模式R属于1NF且每一个非主属性完全函数依赖于码，则R属于第二范式。</li>
-<li>3NF：关系模式R中若不存在这样的码X， 属性组Y及非主属性Z(Z∉Y)使得x→Y，(Y\X)Y→Z成立，则称R属于第三范式。3NF 消除了非主属性对码的传递函数依赖。<br><strong>我的理解：</strong><br>1NF：无重复的列<br>2NF：在1NF的基础上，非主属性完全依赖于码<br>3NF：满足2NF的条件下不存在传递函数依赖</li>
-</ul>
+<p>grant all privileges on table student, course, sc to 刘明 with grant option<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br></pre></td><td class="code"><pre><span class="line"># 简答题</span><br><span class="line"> 1. 试述1NF、2NF、3NF 的概念。</span><br><span class="line">	* 1NF：每一个分量都是不可再分是数据项的关系模式属于第一范式。</span><br><span class="line">	* 2NF：若关系模式R属于1NF且每一个非主属性完全函数依赖于码，则R属于第二范式。</span><br><span class="line">	* 3NF：关系模式R中若不存在这样的码X， 属性组Y及非主属性Z(Z∉Y)使得x→Y，(Y\X)Y→Z成立，则称R属于第三范式。3NF 消除了非主属性对码的传递函数依赖。</span><br><span class="line">**我的理解：**</span><br><span class="line">	1NF：无重复的列</span><br><span class="line">	2NF：在1NF的基础上，非主属性完全依赖于码</span><br><span class="line">	3NF：满足2NF的条件下不存在传递函数依赖</span><br><span class="line">2. 什么是事务?事务具有哪些特性?</span><br><span class="line">	* 事务是用户定义的一个数据库操作序列，这些操作要么全做要么全不做，是一个不可分割的工作单位。</span><br><span class="line">	* 事务具有原子性、一致性、 隔离性和持续性等特性</span><br><span class="line">3. 简述系统故障的恢复策略。</span><br><span class="line">	* 正向扫描日志文件(即从头扫描日志文件)，找出在故障发生前已经提交的事务(这些事务既有Begin Transaction记录，也有Comit记录)，将其事务标识记入重做(Redo)队列。同时找出故障发生时尚未完成的事务(这些事务只有Begin Transaction 记录，无相应的Comit记录)，将其事务标识记入撤消(Undo)队列。</span><br><span class="line">	* 对撤消队列中的各个事物进行撤消处理。进行Undo处理的方法是，反向扫描日志文件，对每个Undo事务的更新操作执行逆操作。</span><br><span class="line">	* 对重做队列中的各个事务进行重做处理。进行Redo处理的方法是:正向扫描日志文件，对每个Redo事务重新执行日志文件登记的操作。</span><br><span class="line">4. 什么是“死锁”?如何解除死锁?</span><br><span class="line">	* 在对并发事务采用封锁机制时，有可能若干事务都处于等待状态，等待对方释放封锁，造成事务都不能维续运行下去的僵局称为“死锁&quot;”。</span><br><span class="line">	* 发生死锁时，系统将撒销某个事务，释放封锁，使其它事务有可能继续运行下去。</span><br><span class="line">5. 为什么视图被称为虚表?基本表与视图的区别是什么?</span><br><span class="line">	* 数据库中只存储有关视图的定义而不存储视图所对应的数据，这些数据仍存放在导出视图的基本表中，所以视图被称为虚表。</span><br><span class="line">	* 基本表是实际独立存放在数据库中的表，是实表。</span><br><span class="line">6. 什么是“脏数据”?如何避免读“脏数据&quot; ?</span><br><span class="line">      * 事务执行时把未提交随后又被撤销的数据称为“脏数据”,</span><br><span class="line">      * 为避免读“脏数据”，事务可以对数据加S锁以防止其他事务对该数据进行修改。</span><br><span class="line">7. 简述数据库逻辑结构设计的任务及步骤。</span><br><span class="line">	逻辑结构设计的任务:把概念结构转换为与选用DBMS 产品所支持的数据模型相符合的逻辑结构。</span><br><span class="line">	逻辑结构设计的步骤:</span><br><span class="line">		* 1) 将概念结构转换为一般的关系模型; </span><br><span class="line">		* 2) 将转换来的关系模型向特定DBMS支持下的数据模型转换: </span><br><span class="line">		* 3)  对数据模型进行优化。</span><br><span class="line">8. 封锁的类型。</span><br><span class="line">      * 排它锁(Exclusive Locks,简称X锁，又称为写锁):若事务T对数据对象A加上X锁，则只允许T读取和修改A,其他任何事务都不能再对A加任何类型的锁，直到T释放A上的锁。这就保证了其他事务在T释放A上的锁之前不能再读取和修改A.</span><br><span class="line">      * 共享锁(Share Locks, 简称S锁，又称为读锁):若事务T对数据对象A加上S锁，事务T可以读A但不能修改A,其他事务只能再对A加S锁，而不能加X锁，直到T释放A上的S锁。这就保证了其他事物可以读A,但在T释放A上的S锁之前不能对A做任何修改。</span><br><span class="line"> </span><br><span class="line"># E-R图、关系模式</span><br><span class="line">1. 设某商业集团数据库中有三个实体集。一是“商店”实体集，属性有商店编号、商店名、地址等；二是“商品”实体集，属性有商品号、商品名、规格、单价等；三是“职工”实体集，属性有职工编号、姓名、性别、业绩等。</span><br><span class="line">商店与商品间存在“销售”联系，每个商店可销售多种商品，每种商品也可放在多个商店销售，有月销售量；商店与职工间存在着“聘用”联系，每个商店有许多职工，每个职工只能在一个商店工作，商店聘用职工有聘期和月薪。</span><br><span class="line">（1）试画出E-R图，并在图上注明属性、联系的类型。</span><br><span class="line"></span><br><span class="line">![upload successful](/jhd.blog/images/pasted-5.png)</span><br><span class="line"></span><br><span class="line">（2）将E-R图转换成关系模型，并注明主键和外键。</span><br><span class="line">	商店（ ~商点编号~ ，商品名，地址）</span><br><span class="line">	商品（~商品号~，商品名，规格，价格）</span><br><span class="line">	职工（~职工编号~，姓名，性别，业绩）</span><br><span class="line">	销量（~商店编号，商品号~，月销量）</span><br><span class="line">	聘用（~商店编号，职工编号~，聘期，月薪）</span><br><span class="line"></span><br><span class="line"># 模式分解</span><br><span class="line">1. 设有关系模式R（职工编号，日期，日营业额，部门名，部门经理），该模式统计商店里每个职工的日营业额，以及职工所在的部门和经理信息。如果规定：每个职工每天只有一个营业额；每个职工只在一个部门工作；每个部门只有一个经理。试回答下列问题：</span><br><span class="line">⑴ 根据上述规定，写出模式R的基本FD和关键码；</span><br><span class="line">	基本FD：</span><br><span class="line">		（职工编号，日期）→  日营业额</span><br><span class="line">		（职工编号）→   部门名</span><br><span class="line">		（部门名）→   部门经理</span><br><span class="line">	R的关键码为：（职工编号，日期）</span><br><span class="line">⑵ 说明R不是2NF的理由，并把R分解成2NF模式集；</span><br><span class="line">	R中有两个这样的FD：</span><br><span class="line">	（职工编号，日期）→（部门名，部门经理）</span><br><span class="line">	（职工编号）→（部门名，部门经理）</span><br><span class="line">	可见前一个FD是局部依赖，所以R不是2NF模式，</span><br><span class="line">	R应分解为：</span><br><span class="line">		R1（~职工编号~，部门名，部门经理）</span><br><span class="line">   		R2（~职工编号~，日期，日营业额）</span><br><span class="line">	此处，R1和R2都是2NF模式</span><br><span class="line">⑶ 进而分解成3NF模式集。</span><br><span class="line">	R2已是3NF模式。</span><br><span class="line">	在R1中，存在两个FD：</span><br><span class="line">		（职工编号）→   部门名</span><br><span class="line">		（部门名）→   部门经理</span><br><span class="line">	因此，“职工编号  →   部门经理”是一个传递依赖，R1不是3NF模式。</span><br><span class="line">	R1应分解为：</span><br><span class="line">		R11（~职工编号~，部门名）</span><br><span class="line">		R12（~部门名~，部门经理）</span><br><span class="line">	这样，ρ=&#123;R11，Rl2，R2&#125;是一个3NF模式集。</span><br><span class="line">2. 设有关系模式</span><br><span class="line">R（职工名，项目名，工资，部门名，部门经理）</span><br><span class="line">如果规定每个职工可参加多个项目，各领一份工资；每个项目只属于一个部门管理；每个部门只有一个经理。</span><br><span class="line">(1) 试写出关系模式R的基本FD和关键码。</span><br><span class="line">	基本FD：</span><br><span class="line">		（职工名，项目名）→  工资</span><br><span class="line">		（项目名）→  部门名</span><br><span class="line">		（部门名）→ 部门经理</span><br><span class="line">(2) 说明R不是2NF模式的理由，并把R分解成2NF模式集。</span><br><span class="line">	R有两个这样的FD：</span><br><span class="line">		R1（职工名，项目名）→  （部门名，部门经理）</span><br><span class="line">		R2（项目名）→  （部门名，部门经理）</span><br><span class="line">	前一个FD是一个局部依赖，因此R不是2NF模式。</span><br><span class="line">	R应分解成两个模式：	</span><br><span class="line">		R1（~项目名~，部门名，部门经理）</span><br><span class="line">		R2（职工名，~项目名~，工资）</span><br><span class="line">	R1和R2都是2NF模式。</span><br><span class="line">(3) 进而把R分解成3NF模式集，并说明理由。</span><br><span class="line">	R2已是3NF模式。在R1中，由于存在两个FD：</span><br><span class="line">	项目名→部门名</span><br><span class="line">	部门名→部门经理</span><br><span class="line">	即存在一个传递依赖，因此R1不是3NF模式。</span><br><span class="line">	对R1应分解成两个模式：</span><br><span class="line">		R11（~项目名~，部门名），</span><br><span class="line">		R12（~部门名~，部门经理）。</span><br><span class="line">	这两个模式都是3NF模式。</span><br><span class="line">	因此，R分解成3NF模式集时，ρ=&#123; R11，R12，R2 &#125;。</span><br><span class="line"></span><br><span class="line"># 数据库，部分函数依赖，传递函数依赖，完全函数依赖，三种范式的区别</span><br><span class="line">**部分函数依赖：**设X,Y是关系R的两个属性集合，存在X→Y，若X’是X的真子集，存在X’→Y，则称Y部分函数依赖于X。</span><br><span class="line"></span><br><span class="line">例子：</span><br><span class="line">	学生基本信息表R中（学号，身份证号，姓名）当然学号属性取值是唯一的，在R关系中：</span><br><span class="line">	（学号，身份证号）-&gt;（姓名），</span><br><span class="line">	（学号）-&gt;（姓名），</span><br><span class="line">	（身份证号）-&gt;（姓名）；</span><br><span class="line">所以姓名部分函数依赖与（学号，身份证号）；</span><br><span class="line"></span><br><span class="line">**完全函数依赖：**设X,Y是关系R的两个属性集合，X’是X的真子集，存在X→Y，但对每一个X’都有X’!→Y，则称Y完全函数依赖于X。</span><br><span class="line"></span><br><span class="line">例子：</span><br><span class="line">	学生基本信息表R（学号，班级，姓名）假设不同的班级学号有相同的，班级内学号不能相同，在R关系中：（学号，班级）-&gt;（姓名），但是（学号）-&gt;(姓名)不成立，（班级）-&gt;(姓名)不成立，所以姓名完全函数依赖与（学号，班级）；</span><br><span class="line"></span><br><span class="line">**传递函数依赖：**设X,Y,Z是关系R中互不相同的属性集合，存在X→Y(Y !→X),Y→Z，则称Z传递函数依赖于X。</span><br><span class="line"></span><br><span class="line">例子：</span><br><span class="line">	在关系R(学号 ,宿舍, 费用)中，(学号)-&gt;(宿舍),宿舍！=学号，(宿舍)-&gt;(费用),费用!=宿舍，所以符合传递函数的要求；</span><br><span class="line"></span><br><span class="line">1. 第一范式（1NF）</span><br><span class="line"></span><br><span class="line"> 在任何一个关系数据库中，第一范式（1NF）是对关系模式的基本要求，不满足第一范式（1NF）的数据库就不是关系数据库。</span><br><span class="line"></span><br><span class="line">所谓第一范式（1NF）是指数据库表的每一列(即每个属性)都是不可分割的基本数据项，同一列中不能有多个值，即实体中的某个属性不能有多个值或者不能有重复的属性。简而言之，第一范式就是无重复的列。</span><br><span class="line"></span><br><span class="line">2. 第二范式（2NF）</span><br><span class="line"></span><br><span class="line">第二范式（2NF）是在第一范式（1NF）的基础上建立起来的，即满足第二范式（2NF）必须先满足第一范式（1NF）。第二范式（2NF）要求数据库表中的每个实例或行必须可以被唯一地区分。为实现区分通常需要为表加上一个列，以存储各个实例的唯一标识。员工信息表中加上了员工编号（emp_id）列，因为每个员工的员工编号是唯一的，因此每个员工可以被唯一区分。这个唯一属性列被称为主关键字或主键、主码。</span><br><span class="line"></span><br><span class="line">第二范式（2NF）要求实体的属性完全依赖于主关键字。所谓完全依赖是指不能存在仅依赖主关键字一部分的属性，如果存在，那么这个属性和主关键字的这一部分应该分离出来形成一个新的实体，新实体与原实体之间是一对多的关系。为实现区分通常需要为表加上一个列，以存储各个实例的唯一标识。简而言之，第二范式就是非主属性依赖于主关键字。</span><br><span class="line"></span><br><span class="line">3. 第三范式（3NF）</span><br><span class="line"></span><br><span class="line">满足第三范式（3NF）必须先满足第二范式（2NF）。在满足第二范式的基础上，切不存在传递函数依赖，那么就是第三范式。简而言之，第三范式就是属性不依赖于其它非主属性。</span><br><span class="line"></span><br><span class="line">**最后简单的总结一下：**</span><br><span class="line"></span><br><span class="line">* 第一范式（1NF）：一个关系模式R的所有属性都是不可分的基本数据项。</span><br><span class="line">* 第二范式（2NF）：关系模式R属于第一范式，且每个非主属性都完全函数依赖于键码。</span><br><span class="line">* 第三范式（3NF）：关系模式R属于第一范式，且每个非主属性都不伟递领带于键码。</span><br><span class="line"></span><br><span class="line"># 程序题</span><br><span class="line">1. 编写10以内数之和</span><br><span class="line">```angularjs</span><br><span class="line">use library</span><br><span class="line">declare @i int,</span><br><span class="line">declare @sum int</span><br><span class="line">set @i=0</span><br><span class="line">set @sum=0</span><br><span class="line">while @i&lt;10</span><br><span class="line">begin</span><br><span class="line">	set @sum=@sum+@i</span><br><span class="line">end</span><br><span class="line">print @sum</span><br></pre></td></tr></table></figure></p>
 <ol start="2">
-<li>什么是事务?事务具有哪些特性?</li>
+<li><p>对应的程序如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">USE Library</span><br><span class="line">GO</span><br><span class="line">IF EXISTS(SELECT * FROM sysobjects _ --如果存在这样的函数则删除之</span><br><span class="line">     WHERE name=&apos;Sum&apos; AND type=&apos;FN&apos;)</span><br><span class="line">   DROP FUNCTION Sum</span><br><span class="line">GO</span><br><span class="line">CREATE FUNCTION Sum(@n int) --输入参数</span><br><span class="line">RETURNS int</span><br><span class="line">AS</span><br><span class="line">BEGIN</span><br><span class="line">   DECLARE @s int,@i int</span><br><span class="line">   SET @s=0</span><br><span class="line">   SET @i=1</span><br><span class="line">   WHILE @i&lt;=@n</span><br><span class="line">   BEGIN</span><br><span class="line">      SET @s=@s+@i</span><br><span class="line">      SET @i=@i+1</span><br><span class="line">   END</span><br><span class="line">   RETURN(@s)</span><br><span class="line">END</span><br><span class="line">GO</span><br><span class="line">PRINT &apos;1+2+...+60=&apos;+CAST(dbo.Sum(60) AS char(10))</span><br><span class="line">GO</span><br><span class="line">程序执行结果如下：</span><br><span class="line">1+2+...+60=1830</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>对应的程序如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">USE Library</span><br><span class="line">GO</span><br><span class="line">IF EXISTS(SELECT * FROM sysobjects        --如果存在这样的函数则删除之</span><br><span class="line">     WHERE name=&apos;nbook&apos; AND (type=&apos;IF&apos; OR type =&apos;TF&apos;))</span><br><span class="line">   DROP FUNCTION nbook</span><br><span class="line">GO</span><br><span class="line">CREATE FUNCTION nbook(@dname char(16))--建立函数nbook</span><br><span class="line">  RETURNS TABLE		--返回表，没有指定表结构，这是内联表值函数的特征</span><br><span class="line">AS</span><br><span class="line">RETURN </span><br><span class="line">(</span><br><span class="line">  SELECT s.学号,s.姓名,s.班号,b.图书名,bor.借书日期</span><br><span class="line">  FROM student s,depart sc,borrow bor,book b</span><br><span class="line">  WHERE s.班号=sc.班号 AND s.学号=bor.学号 AND b.图书编号=bor.图书编号 AND sc.系名=@dname</span><br><span class="line">)</span><br><span class="line">GO</span><br><span class="line">SELECT * </span><br><span class="line">FROM nbook(&apos;计算机系&apos;)</span><br><span class="line">ORDER BY 学号</span><br><span class="line">GO</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
-<ul>
-<li>事务是用户定义的一个数据库操作序列，这些操作要么全做要么全不做，是一个不可分割的工作单位。</li>
-<li>事务具有原子性、一致性、 隔离性和持续性等特性</li>
-</ul>
-<ol start="3">
-<li>简述系统故障的恢复策略。</li>
-</ol>
-<ul>
-<li>正向扫描日志文件(即从头扫描日志文件)，找出在故障发生前已经提交的事务(这些事务既有Begin Transaction记录，也有Comit记录)，将其事务标识记入重做(Redo)队列。同时找出故障发生时尚未完成的事务(这些事务只有Begin Transaction 记录，无相应的Comit记录)，将其事务标识记入撤消(Undo)队列。</li>
-<li>对撤消队列中的各个事物进行撤消处理。进行Undo处理的方法是，反向扫描日志文件，对每个Undo事务的更新操作执行逆操作。</li>
-<li>对重做队列中的各个事务进行重做处理。进行Redo处理的方法是:正向扫描日志文件，对每个Redo事务重新执行日志文件登记的操作。</li>
-</ul>
+<p>程序执行结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">学号   	姓名      班号    图书名                借书日期</span><br><span class="line">----- ---------- ------ ---------------- --------------------------</span><br><span class="line">1     	张任        0501   数据结构             	2013-12-05 00:00:00.000</span><br><span class="line">1     	张任        0501   信息学             	2013-11-08 00:00:00.000</span><br><span class="line">2     	程华        0501   C程序设计            	2013-10-02 00:00:00.000</span><br><span class="line">2     	程华        0501   C习题解答            	2014-04-03 00:00:00.000</span><br><span class="line">3     	张丽        0502   软件工程             	2014-04-10 00:00:00.000</span><br><span class="line">3     	张丽        0502   操作系统             	2014-04-11 00:00:00.000</span><br><span class="line">4     	王英        0502   C程序设计            	2014-04-06 00:00:00.000</span><br><span class="line">5     	李静        0502   高等数学             	2014-02-03 00:00:00.000</span><br></pre></td></tr></table></figure></p>
 <ol start="4">
-<li>什么是“死锁”?如何解除死锁?</li>
+<li>对应的程序如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">USE Library</span><br><span class="line">GO</span><br><span class="line">IF EXISTS(SELECT * FROM sysobjects        --如果存在这样的函数则删除之</span><br><span class="line">     WHERE name=&apos;pbook&apos; AND (type=&apos;IF&apos; OR type =&apos;TF&apos;))</span><br><span class="line">   DROP FUNCTION pbook</span><br><span class="line">GO</span><br><span class="line">CREATE FUNCTION pbook()  	--建立函数pbook</span><br><span class="line">  RETURNS @st TABLE	</span><br><span class="line">  ( </span><br><span class="line">     系名 char(16),</span><br><span class="line">     平均价格 decimal(4,1)</span><br><span class="line">  )</span><br><span class="line">AS</span><br><span class="line">  BEGIN</span><br><span class="line">    INSERT @st	--向@st中插入满足条件的记录</span><br><span class="line">      SELECT sc.系名 AS &apos;系名&apos;,AVG(b.定价) AS &apos;平均价格&apos;</span><br><span class="line">      FROM depart sc,student s,book b,borrow bor</span><br><span class="line">      WHERE s.班号=sc.班号 AND s.学号=bor.学号 AND b.图书编号=bor.图书编号</span><br><span class="line">      GROUP BY sc.系名</span><br><span class="line">    RETURN</span><br><span class="line">  END</span><br><span class="line">GO</span><br><span class="line">SELECT * FROM pbook()</span><br><span class="line">GO</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
-<ul>
-<li>在对并发事务采用封锁机制时，有可能若干事务都处于等待状态，等待对方释放封锁，造成事务都不能维续运行下去的僵局称为“死锁””。</li>
-<li>发生死锁时，系统将撒销某个事务，释放封锁，使其它事务有可能继续运行下去。</li>
-</ul>
+<p>程序执行结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">系名              平均价格</span><br><span class="line">电子工程系        	29.0</span><br><span class="line">计算机系          	26.8</span><br></pre></td></tr></table></figure></p>
 <ol start="5">
-<li>为什么视图被称为虚表?基本表与视图的区别是什么?</li>
+<li>对应的程序如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">USE Library</span><br><span class="line">GO</span><br><span class="line">--若存在存储过程proc1，则删除之</span><br><span class="line">IF EXISTS(SELECT * FROM sysobjects WHERE name=&apos;proc1&apos; </span><br><span class="line">     AND type=&apos;P&apos;)</span><br><span class="line">   DROP PROCEDURE proc1</span><br><span class="line">GO</span><br><span class="line">--创建存储过程proc1</span><br><span class="line">CREATE PROCEDURE proc1</span><br><span class="line">AS</span><br><span class="line">  SELECT 图书名 AS &apos;书名&apos;,COUNT(*) AS &apos;数目&apos; </span><br><span class="line">  FROM book</span><br><span class="line">  GROUP BY 图书名</span><br><span class="line">GO</span><br><span class="line">EXEC proc1</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
-<ul>
-<li>数据库中只存储有关视图的定义而不存储视图所对应的数据，这些数据仍存放在导出视图的基本表中，所以视图被称为虚表。</li>
-<li>基本表是实际独立存放在数据库中的表，是实表。</li>
-</ul>
+<p>程序执行结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">书名                  		数目</span><br><span class="line"></span><br><span class="line">C程序设计               	2</span><br><span class="line">C习题解答               	2</span><br><span class="line">操作系统                	3</span><br><span class="line">电工学                 	1</span><br><span class="line">高等数学                	1</span><br><span class="line">软件工程                	1</span><br><span class="line">数据结构                	2</span><br><span class="line">数据库原理               	1</span><br><span class="line">数字电路                	1</span><br><span class="line">网络工程                	1</span><br><span class="line">信息学                 	2</span><br></pre></td></tr></table></figure></p>
 <ol start="6">
-<li>什么是“脏数据”?如何避免读“脏数据” ?<ul>
-<li>事务执行时把未提交随后又被撤销的数据称为“脏数据”,</li>
-<li>为避免读“脏数据”，事务可以对数据加S锁以防止其他事务对该数据进行修改。</li>
-</ul>
-</li>
-<li>简述数据库逻辑结构设计的任务及步骤。<br>逻辑结构设计的任务:把概念结构转换为与选用DBMS 产品所支持的数据模型相符合的逻辑结构。<br>逻辑结构设计的步骤:<ul>
-<li>1) 将概念结构转换为一般的关系模型; </li>
-<li>2) 将转换来的关系模型向特定DBMS支持下的数据模型转换: </li>
-<li>3)  对数据模型进行优化。</li>
-</ul>
-</li>
-<li>封锁的类型。<ul>
-<li>排它锁(Exclusive Locks,简称X锁，又称为写锁):若事务T对数据对象A加上X锁，则只允许T读取和修改A,其他任何事务都不能再对A加任何类型的锁，直到T释放A上的锁。这就保证了其他事务在T释放A上的锁之前不能再读取和修改A.</li>
-<li>共享锁(Share Locks, 简称S锁，又称为读锁):若事务T对数据对象A加上S锁，事务T可以读A但不能修改A,其他事务只能再对A加S锁，而不能加X锁，直到T释放A上的S锁。这就保证了其他事物可以读A,但在T释放A上的S锁之前不能对A做任何修改。</li>
-</ul>
-</li>
+<li>对应的程序如下：</li>
 </ol>
-</li>
-</ol>
-<h1 id="E-R图、关系模式"><a href="#E-R图、关系模式" class="headerlink" title="E-R图、关系模式"></a>E-R图、关系模式</h1><ol>
-<li>设某商业集团数据库中有三个实体集。一是“商店”实体集，属性有商店编号、商店名、地址等；二是“商品”实体集，属性有商品号、商品名、规格、单价等；三是“职工”实体集，属性有职工编号、姓名、性别、业绩等。<br>商店与商品间存在“销售”联系，每个商店可销售多种商品，每种商品也可放在多个商店销售，有月销售量；商店与职工间存在着“聘用”联系，每个商店有许多职工，每个职工只能在一个商店工作，商店聘用职工有聘期和月薪。<br>（1）试画出E-R图，并在图上注明属性、联系的类型。</li>
-</ol>
-<p><img src="/jhd.blog/images/pasted-5.png" alt="upload successful"></p>
-<p>（2）将E-R图转换成关系模型，并注明主键和外键。<br>    商店（ ~商点编号~ ，商品名，地址）<br>    商品（~商品号~，商品名，规格，价格）<br>    职工（~职工编号~，姓名，性别，业绩）<br>    销量（~商店编号，商品号~，月销量）<br>    聘用（~商店编号，职工编号~，聘期，月薪）</p>
-<h1 id="模式分解"><a href="#模式分解" class="headerlink" title="模式分解"></a>模式分解</h1><ol>
-<li>设有关系模式R（职工编号，日期，日营业额，部门名，部门经理），该模式统计商店里每个职工的日营业额，以及职工所在的部门和经理信息。如果规定：每个职工每天只有一个营业额；每个职工只在一个部门工作；每个部门只有一个经理。试回答下列问题：<br>⑴ 根据上述规定，写出模式R的基本FD和关键码；<br> 基本FD：<pre><code>（职工编号，日期）→  日营业额
-（职工编号）→   部门名
-（部门名）→   部门经理
-</code></pre> R的关键码为：（职工编号，日期）<br>⑵ 说明R不是2NF的理由，并把R分解成2NF模式集；<br> R中有两个这样的FD：<br> （职工编号，日期）→（部门名，部门经理）<br> （职工编号）→（部门名，部门经理）<br> 可见前一个FD是局部依赖，所以R不是2NF模式，<br> R应分解为：<pre><code>R1（~职工编号~，部门名，部门经理）
-   R2（~职工编号~，日期，日营业额）
-</code></pre> 此处，R1和R2都是2NF模式<br>⑶ 进而分解成3NF模式集。<br> R2已是3NF模式。<br> 在R1中，存在两个FD：<pre><code>（职工编号）→   部门名
-（部门名）→   部门经理
-</code></pre> 因此，“职工编号  →   部门经理”是一个传递依赖，R1不是3NF模式。<br> R1应分解为：<pre><code>R11（~职工编号~，部门名）
-R12（~部门名~，部门经理）
-</code></pre> 这样，ρ={R11，Rl2，R2}是一个3NF模式集。</li>
-<li>设有关系模式<br>R（职工名，项目名，工资，部门名，部门经理）<br>如果规定每个职工可参加多个项目，各领一份工资；每个项目只属于一个部门管理；每个部门只有一个经理。<br>(1) 试写出关系模式R的基本FD和关键码。<br> 基本FD：<pre><code>（职工名，项目名）→  工资
-（项目名）→  部门名
-（部门名）→ 部门经理
-</code></pre>(2) 说明R不是2NF模式的理由，并把R分解成2NF模式集。<br> R有两个这样的FD：<pre><code>R1（职工名，项目名）→  （部门名，部门经理）
-R2（项目名）→  （部门名，部门经理）
-</code></pre> 前一个FD是一个局部依赖，因此R不是2NF模式。<br> R应分解成两个模式：    <pre><code>R1（~项目名~，部门名，部门经理）
-R2（职工名，~项目名~，工资）
-</code></pre> R1和R2都是2NF模式。<br>(3) 进而把R分解成3NF模式集，并说明理由。<br> R2已是3NF模式。在R1中，由于存在两个FD：<br> 项目名→部门名<br> 部门名→部门经理<br> 即存在一个传递依赖，因此R1不是3NF模式。<br> 对R1应分解成两个模式：<pre><code>R11（~项目名~，部门名），
-R12（~部门名~，部门经理）。
-</code></pre> 这两个模式都是3NF模式。<br> 因此，R分解成3NF模式集时，ρ={ R11，R12，R2 }。</li>
-</ol>
-<h1 id="数据库，部分函数依赖，传递函数依赖，完全函数依赖，三种范式的区别"><a href="#数据库，部分函数依赖，传递函数依赖，完全函数依赖，三种范式的区别" class="headerlink" title="数据库，部分函数依赖，传递函数依赖，完全函数依赖，三种范式的区别"></a>数据库，部分函数依赖，传递函数依赖，完全函数依赖，三种范式的区别</h1><p><strong>部分函数依赖：</strong>设X,Y是关系R的两个属性集合，存在X→Y，若X’是X的真子集，存在X’→Y，则称Y部分函数依赖于X。</p>
-<p>例子：<br>    学生基本信息表R中（学号，身份证号，姓名）当然学号属性取值是唯一的，在R关系中：<br>    （学号，身份证号）-&gt;（姓名），<br>    （学号）-&gt;（姓名），<br>    （身份证号）-&gt;（姓名）；<br>所以姓名部分函数依赖与（学号，身份证号）；</p>
-<p><strong>完全函数依赖：</strong>设X,Y是关系R的两个属性集合，X’是X的真子集，存在X→Y，但对每一个X’都有X’!→Y，则称Y完全函数依赖于X。</p>
-<p>例子：<br>    学生基本信息表R（学号，班级，姓名）假设不同的班级学号有相同的，班级内学号不能相同，在R关系中：（学号，班级）-&gt;（姓名），但是（学号）-&gt;(姓名)不成立，（班级）-&gt;(姓名)不成立，所以姓名完全函数依赖与（学号，班级）；</p>
-<p><strong>传递函数依赖：</strong>设X,Y,Z是关系R中互不相同的属性集合，存在X→Y(Y !→X),Y→Z，则称Z传递函数依赖于X。</p>
-<p>例子：<br>    在关系R(学号 ,宿舍, 费用)中，(学号)-&gt;(宿舍),宿舍！=学号，(宿舍)-&gt;(费用),费用!=宿舍，所以符合传递函数的要求；</p>
-<ol>
-<li><p>第一范式（1NF）</p>
-<p>在任何一个关系数据库中，第一范式（1NF）是对关系模式的基本要求，不满足第一范式（1NF）的数据库就不是关系数据库。</p>
-</li>
-</ol>
-<p>所谓第一范式（1NF）是指数据库表的每一列(即每个属性)都是不可分割的基本数据项，同一列中不能有多个值，即实体中的某个属性不能有多个值或者不能有重复的属性。简而言之，第一范式就是无重复的列。</p>
-<ol start="2">
-<li>第二范式（2NF）</li>
-</ol>
-<p>第二范式（2NF）是在第一范式（1NF）的基础上建立起来的，即满足第二范式（2NF）必须先满足第一范式（1NF）。第二范式（2NF）要求数据库表中的每个实例或行必须可以被唯一地区分。为实现区分通常需要为表加上一个列，以存储各个实例的唯一标识。员工信息表中加上了员工编号（emp_id）列，因为每个员工的员工编号是唯一的，因此每个员工可以被唯一区分。这个唯一属性列被称为主关键字或主键、主码。</p>
-<p>第二范式（2NF）要求实体的属性完全依赖于主关键字。所谓完全依赖是指不能存在仅依赖主关键字一部分的属性，如果存在，那么这个属性和主关键字的这一部分应该分离出来形成一个新的实体，新实体与原实体之间是一对多的关系。为实现区分通常需要为表加上一个列，以存储各个实例的唯一标识。简而言之，第二范式就是非主属性依赖于主关键字。</p>
-<ol start="3">
-<li>第三范式（3NF）</li>
-</ol>
-<p>满足第三范式（3NF）必须先满足第二范式（2NF）。在满足第二范式的基础上，切不存在传递函数依赖，那么就是第三范式。简而言之，第三范式就是属性不依赖于其它非主属性。</p>
-<p><strong>最后简单的总结一下：</strong></p>
-<ul>
-<li>第一范式（1NF）：一个关系模式R的所有属性都是不可分的基本数据项。</li>
-<li>第二范式（2NF）：关系模式R属于第一范式，且每个非主属性都完全函数依赖于键码。</li>
-<li>第三范式（3NF）：关系模式R属于第一范式，且每个非主属性都不伟递领带于键码。</li>
-</ul>
-<h1 id="程序题"><a href="#程序题" class="headerlink" title="程序题"></a>程序题</h1><p>use library<br>declare @i int,<br>declare @sum int<br>set @i=0<br>set @sum=0<br>while @i&lt;10<br>begin<br>    set @sum=@sum+@i<br>end<br>print @sum</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">USE Library</span><br><span class="line">GO</span><br><span class="line">--若存在存储过程proc2，则删除之</span><br><span class="line">IF EXISTS(SELECT * FROM sysobjects WHERE name=&apos;proc2&apos; </span><br><span class="line">     AND type=&apos;P&apos;)</span><br><span class="line">   DROP PROCEDURE proc2</span><br><span class="line">GO</span><br><span class="line">--创建存储过程proc2</span><br><span class="line">CREATE PROCEDURE proc2(@bn char(16))</span><br><span class="line">AS</span><br><span class="line"> DECLARE @pt char(16)</span><br><span class="line"> SET @pt=&apos;%&apos;+RTRIM(@bn)+&apos;%&apos;</span><br><span class="line"> SELECT s.学号,s.姓名,s.班号,b.图书名 </span><br><span class="line"> FROM student s,book b,borrow bor</span><br><span class="line"> WHERE s.学号=bor.学号 AND b.图书编号=bor.图书编号</span><br><span class="line">     AND b.图书名 LIKE @pt</span><br><span class="line">ORDER BY s.班号</span><br><span class="line">GO</span><br><span class="line">EXEC proc2 &apos;数&apos;</span><br></pre></td></tr></table></figure>
+<p>程序执行结果如下：</p>
+<pre><code class="angularjs">学号   姓名      班号    图书名
+1     张任        0501   数据结构           
+5     李静        0502   高等数学           
+12    李华        0801   数字电路   
+</code></pre>
 
       
     </div>
@@ -881,7 +811,7 @@ R12（~部门名~，部门经理）。
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据库原理与技术—-基于sql-server-2012期末复习"><span class="nav-number">1.</span> <span class="nav-text">数据库原理与技术—-基于sql server 2012期末复习</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关系代数"><span class="nav-number">2.</span> <span class="nav-text">关系代数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#除"><span class="nav-number">2.1.</span> <span class="nav-text">除</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其它"><span class="nav-number">2.2.</span> <span class="nav-text">其它</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SQL语句"><span class="nav-number">3.</span> <span class="nav-text">SQL语句</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#简答题"><span class="nav-number">4.</span> <span class="nav-text">简答题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#E-R图、关系模式"><span class="nav-number">5.</span> <span class="nav-text">E-R图、关系模式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#模式分解"><span class="nav-number">6.</span> <span class="nav-text">模式分解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据库，部分函数依赖，传递函数依赖，完全函数依赖，三种范式的区别"><span class="nav-number">7.</span> <span class="nav-text">数据库，部分函数依赖，传递函数依赖，完全函数依赖，三种范式的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#程序题"><span class="nav-number">8.</span> <span class="nav-text">程序题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据库原理与技术—-基于sql-server-2012期末复习"><span class="nav-number">1.</span> <span class="nav-text">数据库原理与技术—-基于sql server 2012期末复习</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关系代数"><span class="nav-number">2.</span> <span class="nav-text">关系代数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#除"><span class="nav-number">2.1.</span> <span class="nav-text">除</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其它"><span class="nav-number">2.2.</span> <span class="nav-text">其它</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SQL语句"><span class="nav-number">3.</span> <span class="nav-text">SQL语句</span></a></li></ol></div>
             
 
           </div>
@@ -902,7 +832,7 @@ R12（~部门名~，部门经理）。
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
