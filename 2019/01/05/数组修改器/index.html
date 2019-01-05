@@ -112,17 +112,24 @@
 
 
 
-  <meta name="description" content="这是一个来自江海大初学者的博客">
+  <meta name="description" content="数组修改器添加元素如果数组已存在，“$push”会向已有的数组末尾加入一个元素，要是没有就创建一个新的数组。往comments在添加一条评论还有一种简单的“$push”使用形式，使用“$each”子操作符，可以通过一次“$push”操作添加多个值.若希望数组的长度固定，可以将“$slice”和“$push”组合在一起使用。这个例子中，数组最大长度是10，“$slice”的值必须是负数。ps：若数组">
 <meta name="keywords" content="江海大初学者">
-<meta property="og:type" content="website">
-<meta property="og:title" content="江海大初学者的博客">
-<meta property="og:url" content="https://17714574361.github.io/jhd.blog/archives/2018/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数组修改器">
+<meta property="og:url" content="https://17714574361.github.io/jhd.blog/2019/01/05/数组修改器/index.html">
 <meta property="og:site_name" content="江海大初学者的博客">
-<meta property="og:description" content="这是一个来自江海大初学者的博客">
+<meta property="og:description" content="数组修改器添加元素如果数组已存在，“$push”会向已有的数组末尾加入一个元素，要是没有就创建一个新的数组。往comments在添加一条评论还有一种简单的“$push”使用形式，使用“$each”子操作符，可以通过一次“$push”操作添加多个值.若希望数组的长度固定，可以将“$slice”和“$push”组合在一起使用。这个例子中，数组最大长度是10，“$slice”的值必须是负数。ps：若数组">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://17714574361.github.io/jhd.blog/images/pasted-10.png">
+<meta property="og:image" content="https://17714574361.github.io/jhd.blog/images/pasted-11.png">
+<meta property="og:image" content="https://17714574361.github.io/jhd.blog/images/pasted-12.png">
+<meta property="og:image" content="https://17714574361.github.io/jhd.blog/images/pasted-13.png">
+<meta property="og:image" content="https://17714574361.github.io/jhd.blog/images/pasted-14.png">
+<meta property="og:updated_time" content="2019-01-05T05:09:38.212Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="江海大初学者的博客">
-<meta name="twitter:description" content="这是一个来自江海大初学者的博客">
+<meta name="twitter:title" content="数组修改器">
+<meta name="twitter:description" content="数组修改器添加元素如果数组已存在，“$push”会向已有的数组末尾加入一个元素，要是没有就创建一个新的数组。往comments在添加一条评论还有一种简单的“$push”使用形式，使用“$each”子操作符，可以通过一次“$push”操作添加多个值.若希望数组的长度固定，可以将“$slice”和“$push”组合在一起使用。这个例子中，数组最大长度是10，“$slice”的值必须是负数。ps：若数组">
+<meta name="twitter:image" content="https://17714574361.github.io/jhd.blog/images/pasted-10.png">
 
 
 
@@ -131,7 +138,7 @@
 
 
 
-  <link rel="canonical" href="https://17714574361.github.io/jhd.blog/archives/2018/">
+  <link rel="canonical" href="https://17714574361.github.io/jhd.blog/2019/01/05/数组修改器/">
 
 
 
@@ -141,7 +148,7 @@
   };
 </script>
 
-  <title>Archive | 江海大初学者的博客</title>
+  <title>数组修改器 | 江海大初学者的博客</title>
   
 
 
@@ -190,7 +197,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband" style="display: block;">
       <a target="_blank" href="https://github.com/17714574361" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
     </div>
@@ -246,7 +253,7 @@
         
         
           
-          <li class="menu-item menu-item-分档 menu-item-active">
+          <li class="menu-item menu-item-分档">
 
     
     
@@ -339,174 +346,230 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://17714574361.github.io/jhd.blog/jhd.blog/2019/01/05/数组修改器/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="季晓东">
+      <meta itemprop="description" content="这是一个来自江海大初学者的博客">
+      <meta itemprop="image" content="https://upload.jianshu.io/users/upload_avatars/5205102/33693de8cd36.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240#/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="江海大初学者的博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">数组修改器
+              
+            
+          </h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-01-05 13:04:00 / Modified: 13:09:38" itemprop="dateCreated datePublished" datetime="2019-01-05T13:04:00+08:00">2019-01-05</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
           
-        
-        Um..! 9 posts in total. Keep on posting.
-      </span>
-      
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/jhd.blog/categories/MongoDB/" itemprop="url" rel="index"><span itemprop="name">MongoDB</span></a></span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
 
-        
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/jhd.blog/2019/01/05/数组修改器/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/jhd.blog/2019/01/05/数组修改器/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
+             <span id="/jhd.blog/2019/01/05/数组修改器/" class="leancloud_visitors" data-flag-title="数组修改器">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Views: </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/jhd.blog/2018/12/31/数据库原理与技术-基于sql-server-2012期末复习/" itemprop="url">
-              
-                <span itemprop="name">数据库原理与技术----基于sql server 2012期末复习</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-31T20:19:00+08:00" content="2018-12-31">
-          12-31
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/jhd.blog/2018/12/24/dsad/" itemprop="url">
-              
-                <span itemprop="name">基于图形界面的计算机图书类操作的图形界面</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-24T22:16:00+08:00" content="2018-12-24">
-          12-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/jhd.blog/2018/12/24/hexo的配置/" itemprop="url">
-              
-                <span itemprop="name">hexo的配置</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-24T21:00:00+08:00" content="2018-12-24">
-          12-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
+      
+        <h1 id="数组修改器"><a href="#数组修改器" class="headerlink" title="数组修改器"></a>数组修改器</h1><h1 id="添加元素"><a href="#添加元素" class="headerlink" title="添加元素"></a>添加元素</h1><p>如果数组已存在，“$push”会向已有的数组末尾加入一个元素，要是没有就创建一个新的数组。<br><img src="/jhd.blog/images/pasted-10.png" alt="upload successful"><br>往comments在添加一条评论<br><img src="/jhd.blog/images/pasted-11.png" alt="upload successful"><br>还有一种简单的“$push”使用形式，使用“$each”子操作符，可以通过一<br>次“$push”操作添加多个值.<br><img src="/jhd.blog/images/pasted-12.png" alt="upload successful"><br>若希望数组的长度固定，可以将“$slice”和“$push”组合在一起使用。<br><img src="/jhd.blog/images/pasted-13.png" alt="upload successful"><br>这个例子中，数组最大长度是10，“$slice”的值必须是负数。<br><strong>ps：若数组元素数量小于10，那么所有元素保留，若数组元素数量大于10.那么只::保留::最后10个元素</strong></p>
+<p>清理数组可以使用“$sort”，只要向数组中添加子对象就需清理。<br><img src="/jhd.blog/images/pasted-14.png" alt="upload successful"><br>这样会更具“rating”字段的值对数组中的所有对象进行排序，然后保留前10个。注意，不能只将“$slice”或者“$sort”与“$push”配合使用，且必须使用“$each”</p>
+<h2 id="将数组作为数据集使用"><a href="#将数组作为数据集使用" class="headerlink" title="将数组作为数据集使用"></a>将数组作为数据集使用</h2><p>保证数组内元素不会重复。可以用”$ne“来实现。但有时候”$ne“根本行不通，所以”$addToSet“来实现更合适</p>
+<h2 id="删除元素"><a href="#删除元素" class="headerlink" title="删除元素"></a>删除元素</h2><p>可以使用”$pop“也可以使用”$pull“<br>{“$pop”:{“key”:1}}从数组末尾删除一个元素<br>{“$pop”:{“key”:-1}}从头部删除元素</p>
+<p>有时候需要根据特定的条件来删除元素。使用”$pull“<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.list.insert(&#123;&quot;todo&quot;: [&quot;java&quot;,&quot;c&quot;,&quot;js&quot;,&quot;c&quot;]&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>从todo中删除c<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.list.update(&#123;&#125;,&#123;&quot;$pull&quot;:&#123;&quot;todo&quot;:&quot;c&quot;&#125;&#125;)</span><br></pre></td></tr></table></figure></p>
+<p><strong>ps: “$pull”会将所有匹配到的文档删除</strong></p>
+
+      
     </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+      
+    </div>
+
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/jhd.blog/2019/01/05/MongoDB中的Shell/" rel="next" title="MongoDB中的Shell">
+                <i class="fa fa-chevron-left"></i> MongoDB中的Shell
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -527,8 +590,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -645,6 +717,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数组修改器"><span class="nav-number">1.</span> <span class="nav-text">数组修改器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加元素"><span class="nav-number">2.</span> <span class="nav-text">添加元素</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#将数组作为数据集使用"><span class="nav-number">2.1.</span> <span class="nav-text">将数组作为数据集使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除元素"><span class="nav-number">2.2.</span> <span class="nav-text">删除元素</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -791,6 +879,10 @@ Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_
 
 
   
+  <script type="text/javascript" src="/jhd.blog/js/src/scrollspy.js?v=6.6.0"></script>
+<script type="text/javascript" src="/jhd.blog/js/src/post-details.js?v=6.6.0"></script>
+
+
 
   
 

@@ -360,6 +360,1208 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://17714574361.github.io/jhd.blog/jhd.blog/2019/01/05/数组修改器/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="季晓东">
+      <meta itemprop="description" content="这是一个来自江海大初学者的博客">
+      <meta itemprop="image" content="https://upload.jianshu.io/users/upload_avatars/5205102/33693de8cd36.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240#/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="江海大初学者的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/jhd.blog/jhd.blog/2019/01/05/数组修改器/" class="post-title-link" itemprop="https://17714574361.github.io/jhd.blog/index.html">数组修改器</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-01-05 13:04:00 / Modified: 13:09:38" itemprop="dateCreated datePublished" datetime="2019-01-05T13:04:00+08:00">2019-01-05</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/jhd.blog/categories/MongoDB/" itemprop="url" rel="index"><span itemprop="name">MongoDB</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/jhd.blog/2019/01/05/数组修改器/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/jhd.blog/2019/01/05/数组修改器/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/jhd.blog/2019/01/05/数组修改器/" class="leancloud_visitors" data-flag-title="数组修改器">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Views: </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="数组修改器"><a href="#数组修改器" class="headerlink" title="数组修改器"></a>数组修改器</h1><h1 id="添加元素"><a href="#添加元素" class="headerlink" title="添加元素"></a>添加元素</h1><p>如果数组已存在，“$push”会向已有的数组末尾加入一个元素，要是没有就创建一个新的数组。<br><img src="/jhd.blog/images/pasted-10.png" alt="upload successful"><br>往comments在添加一条评论<br><img src="/jhd.blog/images/pasted-11.png" alt="upload successful"><br>还有一种简单的“$push”使用形式，使用“$each”子操作符，可以通过一<br>次“$push”操作添加多个值.<br><img src="/jhd.blog/images/pasted-12.png" alt="upload successful"><br>若希望数组的长度固定，可以将“$slice”和“$push”组合在一起使用。<br><img src="/jhd.blog/images/pasted-13.png" alt="upload successful"><br>这个例子中，数组最大长度是10，“$slice”的值必须是负数。<br><strong>ps：若数组元素数量小于10，那么所有元素保留，若数组元素数量大于10.那么只::保留::最后10个元素</strong></p>
+<p>清理数组可以使用“$sort”，只要向数组中添加子对象就需清理。<br><img src="/jhd.blog/images/pasted-14.png" alt="upload successful"><br>这样会更具“rating”字段的值对数组中的所有对象进行排序，然后保留前10个。注意，不能只将“$slice”或者“$sort”与“$push”配合使用，且必须使用“$each”</p>
+<h2 id="将数组作为数据集使用"><a href="#将数组作为数据集使用" class="headerlink" title="将数组作为数据集使用"></a>将数组作为数据集使用</h2><p>保证数组内元素不会重复。可以用”$ne“来实现。但有时候”$ne“根本行不通，所以”$addToSet“来实现更合适</p>
+<h2 id="删除元素"><a href="#删除元素" class="headerlink" title="删除元素"></a>删除元素</h2><p>可以使用”$pop“也可以使用”$pull“<br>{“$pop”:{“key”:1}}从数组末尾删除一个元素<br>{“$pop”:{“key”:-1}}从头部删除元素</p>
+<p>有时候需要根据特定的条件来删除元素。使用”$pull“<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.list.insert(&#123;&quot;todo&quot;: [&quot;java&quot;,&quot;c&quot;,&quot;js&quot;,&quot;c&quot;]&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>从todo中删除c<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.list.update(&#123;&#125;,&#123;&quot;$pull&quot;:&#123;&quot;todo&quot;:&quot;c&quot;&#125;&#125;)</span><br></pre></td></tr></table></figure></p>
+<p><strong>ps: “$pull”会将所有匹配到的文档删除</strong></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://17714574361.github.io/jhd.blog/jhd.blog/2019/01/05/MongoDB中的Shell/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="季晓东">
+      <meta itemprop="description" content="这是一个来自江海大初学者的博客">
+      <meta itemprop="image" content="https://upload.jianshu.io/users/upload_avatars/5205102/33693de8cd36.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240#/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="江海大初学者的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/jhd.blog/jhd.blog/2019/01/05/MongoDB中的Shell/" class="post-title-link" itemprop="https://17714574361.github.io/jhd.blog/index.html">MongoDB中的Shell</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-01-05 13:03:00 / Modified: 13:10:01" itemprop="dateCreated datePublished" datetime="2019-01-05T13:03:00+08:00">2019-01-05</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/jhd.blog/categories/MongoDB/" itemprop="url" rel="index"><span itemprop="name">MongoDB</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/jhd.blog/2019/01/05/MongoDB中的Shell/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/jhd.blog/2019/01/05/MongoDB中的Shell/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/jhd.blog/2019/01/05/MongoDB中的Shell/" class="leancloud_visitors" data-flag-title="MongoDB中的Shell">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Views: </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="MongoDB中的Shell"><a href="#MongoDB中的Shell" class="headerlink" title="MongoDB中的Shell"></a>MongoDB中的Shell</h1><p>可用来预MongoDB实例交互。</p>
+<h1 id="运行shell"><a href="#运行shell" class="headerlink" title="运行shell"></a>运行shell</h1><p>运行mongo启动shell，启动时必须保证mongod是启动的。<br>Shell是一个功能完备的javaScript解释器，可以运行任意的js程序。</p>
+<h1 id="MongoDB客户端"><a href="#MongoDB客户端" class="headerlink" title="MongoDB客户端"></a>MongoDB客户端</h1><p>查看db当前指向哪个数据库，使用db命令<br>选择数据库：<code>use foobar</code></p>
+<h2 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h2><p>Insert函数将一个文档插入到集合中。</p>
+<h2 id="读取"><a href="#读取" class="headerlink" title="读取"></a>读取</h2><p>Find和findOne方法可以用于查询集合里的文档，若查一个用findOne，使用find时最多20个匹配文档</p>
+<h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><p>Update方法接收至少两个参数：第一个时限定条件，第二个是新的 文档。</p>
+<h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><p>Remove方法将文档从数据库中永久删除，可接受一个参数作为限定条件</p>
+<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><h2 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h2><ol>
+<li>null：表空值或不存在的字段</li>
+<li>布尔：true | false</li>
+<li>数字：默认使用64位浮点型，可使用NumberInt类（4字节的整数）或NumberLong类（8字符带符号整数）</li>
+<li>字符串</li>
+<li>数组：数据的列表或数据集</li>
+<li>对象<h2 id="日期"><a href="#日期" class="headerlink" title="日期"></a>日期</h2>new Date()创建日期对象（调用constructor），而Date()返回的是日期字符串（没调用constructor），这是由js的工作机制决定的<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2>是一组值，可以作为有序对象，也可作为无序对象，数组中可以包含不同类型的元素：<code>{&quot;things&quot;: [&quot;pie&quot;, 3.14]}</code>MongoDB可以深入数组内部对其内容进行操作<h2 id="内嵌文档"><a href="#内嵌文档" class="headerlink" title="内嵌文档"></a>内嵌文档</h2>文档可以作为键的值，这种的文档就是内嵌文档，可以使数据组织方式更加自然。MongoDB也能够理解内嵌文档的结构，并深入其中构建索引、执行查询等<br>优点：使用得当的话，内嵌文档会使信息的表示更加自然，也可能会提高效率<br>缺点：修改信息不方便</li>
+</ol>
+<h2 id="id"><a href="#id" class="headerlink" title="_id"></a>_id</h2><p>必须的，任意类型，默认是ObjectId对象，在每个集合中具有唯一性</p>
+<h2 id="ObjectId"><a href="#ObjectId" class="headerlink" title="ObjectId"></a>ObjectId</h2><p>不同的机器都用全局唯一的同种方法方便地生成它。MongoDB不采用id自增是因为在多个服务器上同步自增加主键值既费力又费时，所以MongoDB的初衷就是用作分布式数据库，所以能够在分片的环境中生存唯一的标示符非常重要。ObjectId使用12字节，又一个24个16进制数字组成的字符串（每个字节可以存储2个16进制数字）。ObjectId的12字节生产方式是：</p>
+<p><img src="/jhd.blog/images/pasted-6.png" alt="upload successful"></p>
+<ul>
+<li><strong>时间戳：</strong>从标准纪元开始，秒为单位，与随后的5字节，提供了秒级别的唯一性。大概以时间先后顺序插入的。包含了文档创建的时间。</li>
+<li><strong>机器：</strong>所在主机的唯一标识符。</li>
+<li><strong>pid：</strong>ObjectId的进程的进程标识符</li>
+<li><strong>计数器：</strong>保证相同进程同一秒产生的ObjectId也是唯一的，一秒钟最多允许每个进程拥有2563个不同的ObjectId。</li>
+</ul>
+<h1 id="自动生成-id"><a href="#自动生成-id" class="headerlink" title="自动生成_id"></a>自动生成_id</h1><p>如果没有“_id”，系统会自动帮你创建一个。可以由服务器来做，但通常会在客户端由驱动程序完成。这一做法就体现了MongoDB的哲学：能交给客户端驱动程序来做的事情就不要交给服务器来做。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://17714574361.github.io/jhd.blog/jhd.blog/2019/01/05/创建、更新和删除文档/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="季晓东">
+      <meta itemprop="description" content="这是一个来自江海大初学者的博客">
+      <meta itemprop="image" content="https://upload.jianshu.io/users/upload_avatars/5205102/33693de8cd36.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240#/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="江海大初学者的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/jhd.blog/jhd.blog/2019/01/05/创建、更新和删除文档/" class="post-title-link" itemprop="https://17714574361.github.io/jhd.blog/index.html">创建、更新和删除文档</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-01-05 13:03:00 / Modified: 13:09:50" itemprop="dateCreated datePublished" datetime="2019-01-05T13:03:00+08:00">2019-01-05</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/jhd.blog/categories/MongoDB/" itemprop="url" rel="index"><span itemprop="name">MongoDB</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/jhd.blog/2019/01/05/创建、更新和删除文档/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/jhd.blog/2019/01/05/创建、更新和删除文档/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/jhd.blog/2019/01/05/创建、更新和删除文档/" class="leancloud_visitors" data-flag-title="创建、更新和删除文档">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Views: </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="创建、更新和删除文档"><a href="#创建、更新和删除文档" class="headerlink" title="创建、更新和删除文档"></a>创建、更新和删除文档</h1><h1 id="插入并保存文档insert"><a href="#插入并保存文档insert" class="headerlink" title="插入并保存文档insert()"></a>插入并保存文档insert()</h1><ol>
+<li><p>插入一个文档</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.foo.insert(&#123;&quot;bar&quot; : &quot;baz&quot;&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>批量插入文档 insertMany() ，只接受一个数组，数组里面每一项是一个文档</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.foo.insertMany([&#123;&quot;_id:0&quot;&#125;,&#123;&quot;_id:1&quot;&#125;,&#123;&quot;_id:2&quot;&#125;])</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>一次发送多个文档明显会提高插入速度</p>
+<h1 id="删除文档-remove"><a href="#删除文档-remove" class="headerlink" title="删除文档 remove({})"></a>删除文档 remove({})</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.foo.remove(&#123;&#125;)</span><br></pre></td></tr></table></figure>
+<p>可接受一个查询文档作为可选参数</p>
+<h2 id="删除速度"><a href="#删除速度" class="headerlink" title="删除速度"></a>删除速度</h2><p>删除文档速度非常快，若要清空整个集合，则使用drop直接删除集合会跟快</p>
+<h1 id="更新文档update"><a href="#更新文档update" class="headerlink" title="更新文档update()"></a>更新文档update()</h1><p>Update有两个参数，一个是查询文档，用于定位需要更新的目标文档，另一个是修改器文档，用于说明要对找到的文档进行哪些修改。<br>如两个更新同事发送，先到服务器先执行，接着执行另一个。所以需要两个同时进行更新会迅速接连完成</p>
+<h2 id="文档替换"><a href="#文档替换" class="headerlink" title="文档替换"></a>文档替换</h2><p>用一个新文档完全替换匹配的文档。适用于进行大规模迁移的情况。</p>
+<p>Ps: 使用”_id”作为查询条件比使用随机字段速度更快，因为是通过“_id”建立索引的。</p>
+<h2 id="使用修改器"><a href="#使用修改器" class="headerlink" title="使用修改器"></a>使用修改器</h2><p>指定对文档中的某些字段进行更新，可使用原子性的更新修改器</p>
+<h3 id="“-set”修改器"><a href="#“-set”修改器" class="headerlink" title="“$set”修改器"></a>“$set”修改器</h3><p>用来制定一个字段的值，若该字段不存在，则创建它。<strong>这对更新模式或新增用户定义的键来说非常方便。</strong></p>
+<p><img src="/jhd.blog/images/pasted-7.png" alt="upload successful"><br>使用”$unset”来删除某个字段</p>
+<p><img src="/jhd.blog/images/pasted-8.png" alt="upload successful"></p>
+<h3 id="“-inc“修改器"><a href="#“-inc“修改器" class="headerlink" title="“$inc“修改器"></a>“$inc“修改器</h3><p>”$inc“修改器用来增加或减少已有的值,或者该键不存在就会创建一个。对于<strong>更新分析数据、因果关系、投票或者其它有变化的值的地方</strong>，使用这个会非常方便。<strong>$inc就是专门增加或减少数字的。$inc只能用于整型、长整型或双精度浮点型的值。</strong></p>
+<p><img src="/jhd.blog/images/pasted-9.png" alt="upload successful"></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://17714574361.github.io/jhd.blog/jhd.blog/2019/01/05/安装好MongoBD如何配置terminal命令/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="季晓东">
+      <meta itemprop="description" content="这是一个来自江海大初学者的博客">
+      <meta itemprop="image" content="https://upload.jianshu.io/users/upload_avatars/5205102/33693de8cd36.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240#/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="江海大初学者的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/jhd.blog/jhd.blog/2019/01/05/安装好MongoBD如何配置terminal命令/" class="post-title-link" itemprop="https://17714574361.github.io/jhd.blog/index.html">安装好MongoBD如何配置terminal命令</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-01-05 13:02:00 / Modified: 13:10:13" itemprop="dateCreated datePublished" datetime="2019-01-05T13:02:00+08:00">2019-01-05</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/jhd.blog/categories/MongoDB/" itemprop="url" rel="index"><span itemprop="name">MongoDB</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/jhd.blog/2019/01/05/安装好MongoBD如何配置terminal命令/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/jhd.blog/2019/01/05/安装好MongoBD如何配置terminal命令/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/jhd.blog/2019/01/05/安装好MongoBD如何配置terminal命令/" class="leancloud_visitors" data-flag-title="安装好MongoBD如何配置terminal命令">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Views: </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="安装好MongoBD如何配置terminal命令"><a href="#安装好MongoBD如何配置terminal命令" class="headerlink" title="安装好MongoBD如何配置terminal命令"></a>安装好MongoBD如何配置terminal命令</h1><p>首先在终端输入cd /命令返回到磁盘根目录<br>然后输入命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir -p /data/db    //创建/data/db</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo touch .base_profile</span><br><span class="line">sudo vim .base_profile</span><br></pre></td></tr></table></figure>
+<p>然后，按i键插入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export MONGO_PATH=/usr/local/mongodb  </span><br><span class="line">export PATH=$PATH:$MONGO_PATH/bin</span><br></pre></td></tr></table></figure></p>
+<p>按esc退出，输入”:wq”保存<br>重启terminal</p>
+<p>启动mongodb<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mongod</span><br></pre></td></tr></table></figure></p>
+<p>在另一个terminal窗口运行，mongo，进入shell<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mongo</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://17714574361.github.io/jhd.blog/jhd.blog/2019/01/05/MongoDB基础知识/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="季晓东">
+      <meta itemprop="description" content="这是一个来自江海大初学者的博客">
+      <meta itemprop="image" content="https://upload.jianshu.io/users/upload_avatars/5205102/33693de8cd36.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240#/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="江海大初学者的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/jhd.blog/jhd.blog/2019/01/05/MongoDB基础知识/" class="post-title-link" itemprop="https://17714574361.github.io/jhd.blog/index.html">MongoDB基础知识</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-01-05 13:01:00 / Modified: 13:10:25" itemprop="dateCreated datePublished" datetime="2019-01-05T13:01:00+08:00">2019-01-05</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/jhd.blog/categories/MongoDB/" itemprop="url" rel="index"><span itemprop="name">MongoDB</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/jhd.blog/2019/01/05/MongoDB基础知识/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/jhd.blog/2019/01/05/MongoDB基础知识/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/jhd.blog/2019/01/05/MongoDB基础知识/" class="leancloud_visitors" data-flag-title="MongoDB基础知识">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Views: </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="MongoDB基础知识"><a href="#MongoDB基础知识" class="headerlink" title="MongoDB基础知识"></a>MongoDB基础知识</h1><ul>
+<li>文档（document）是MongoDB的数据的基本单元，类似于关系型数据库中的行。</li>
+<li>集合（collection）可以看作一个拥有动态模式的表。</li>
+<li>每一个文档（document）都有一个特殊的键“_id”，这个键在文档所属的集合中是唯一的。</li>
+<li>MongoDB自带简单强大的javaScript Shell。</li>
+</ul>
+<h2 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h2><p>文档是MongoDB的核心概念，是键值对的一个有序集，文档表示为对象：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;greeting&quot;: &quot;Hello!&quot;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>文档的键是字符串：</p>
+<ul>
+<li>键不能含有\0。这个字符表键的结尾。</li>
+<li>不能使用.和$做为键，其具有特殊含义</li>
+</ul>
+<p>MongoDB区分类型和大小下，只有完全一样才一样，比如下面俩文档是不同的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;foo&quot;: 3&#125;</span><br><span class="line">&#123;&quot;foo&quot;: &quot;3&quot;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>MongoDB的键是不能重复的。</p>
+<p>文档中的键值对是有序的，但是MongoDB会自动帮你排序</p>
+<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p>集合就是一组文档，一个集合就相当于一张表</p>
+<h3 id="动态模式"><a href="#动态模式" class="headerlink" title="动态模式"></a>动态模式</h3><p>集合是动态模式。一个集合里的文档可以各式各样<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;greeting&quot;: &quot;hello&quot;&#125;</span><br><span class="line">&#123;&quot;foo&quot;: 5&#125;</span><br></pre></td></tr></table></figure></p>
+<p>但是不推荐这样做，还是要把不同类型的文档放在不同的集合中，这样可以提高其性能。</p>
+<h3 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h3><ul>
+<li>集合名不能是空字符串</li>
+<li>集合名不能包含\0字符</li>
+<li>集合名不能以“system”开头（系统保留的前缀）</li>
+<li>集合名不能包含‘$’字符（系统生成的某些集合中包含$）</li>
+</ul>
+<h3 id="子集合"><a href="#子集合" class="headerlink" title="子集合"></a>子集合</h3><p>组织集合使用“.”分隔不同冥冥的自己和。</p>
+<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><p>MongoDB中，多个文档组成集合，多个集合组成数据库。应为数据库最终会变成文件系统里的文件，所以数据库名就要预文件系统里的文件的命名规则相同。<br>系统保留数据库名是有特殊意义的：<br>Admin：用户权限库<br>Local：这个数据库永远不能复制<br>Config：MongoDB用于分片设置是，分片信息会存储在config数据库中</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://17714574361.github.io/jhd.blog/jhd.blog/2019/01/05/MongoDB简介/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="季晓东">
+      <meta itemprop="description" content="这是一个来自江海大初学者的博客">
+      <meta itemprop="image" content="https://upload.jianshu.io/users/upload_avatars/5205102/33693de8cd36.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240#/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="江海大初学者的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/jhd.blog/jhd.blog/2019/01/05/MongoDB简介/" class="post-title-link" itemprop="https://17714574361.github.io/jhd.blog/index.html">MongoDB简介</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-01-05 13:00:00 / Modified: 13:10:41" itemprop="dateCreated datePublished" datetime="2019-01-05T13:00:00+08:00">2019-01-05</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/jhd.blog/categories/MongoDB/" itemprop="url" rel="index"><span itemprop="name">MongoDB</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/jhd.blog/2019/01/05/MongoDB简介/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/jhd.blog/2019/01/05/MongoDB简介/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/jhd.blog/2019/01/05/MongoDB简介/" class="leancloud_visitors" data-flag-title="MongoDB简介">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Views: </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="MongoDB简介"><a href="#MongoDB简介" class="headerlink" title="MongoDB简介"></a>MongoDB简介</h1><p>MongoDB是一款强大、灵活，且易于扩展的通用型数据库。</p>
+<p>MongoDB是一个面向文档的数据库，不采用关系模型是为了获得更好的扩展性。</p>
+<h2 id="MongoDB特点："><a href="#MongoDB特点：" class="headerlink" title="MongoDB特点："></a>MongoDB特点：</h2><ol>
+<li>易于使用</li>
+<li>易于扩展</li>
+<li>功能丰富</li>
+<li>性能卓越</li>
+</ol>
+<h3 id="易于使用"><a href="#易于使用" class="headerlink" title="易于使用"></a>易于使用</h3><p>文档型数据库不再有“行”的概念，通过在文档中嵌入文档和数组，面向文档的方法能够使用一条记录来表现复杂的层次关系。没有预定义模式：文档的键（key）和值（value）不再是固定的类型和大小。由于没有固定的模式，根据开发需要添加或删除的字段变得更加容易。所以开发者可以尝试大量的数据模型，从中选择一个最好的。</p>
+<h3 id="易于拓展"><a href="#易于拓展" class="headerlink" title="易于拓展"></a>易于拓展</h3><p>MongoDB采用横向扩展，面向文档的数据模型使它能很容易的在多台服务器之间进行数据分割。MongoDB能自动处理跨集群的数据和负载，自动重新分配文档，以及将用户请求路由到正确的机器上。若一个集全需要更大的容量，只需要向集群中添加新服务器，MongoDB就会自动将现有的数据向新服务器传送。</p>
+<h3 id="功能丰富"><a href="#功能丰富" class="headerlink" title="功能丰富"></a>功能丰富</h3><p>除了增删改查外，还有索引、聚合、特殊的集合类型、文件存储</p>
+<h3 id="性能卓越"><a href="#性能卓越" class="headerlink" title="性能卓越"></a>性能卓越</h3><p>MongoDB能对 文档进行动态填充，也能预分配数据文件以利用额外的空间来换取稳定的性能。MongoDB把尽可能多的内存用作缓存，试图为每次查询自动选择正确的索引。</p>
+<h3 id="MongoDB的哲学"><a href="#MongoDB的哲学" class="headerlink" title="MongoDB的哲学"></a>MongoDB的哲学</h3><p>能交给客户端驱动程序来做的事情就不要交给服务器来做。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://17714574361.github.io/jhd.blog/jhd.blog/2018/12/31/数据库原理与技术-基于sql-server-2012期末复习/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1273,7 +2475,7 @@ R12（~部门名~，部门经理）。
                 
                   <a href="/jhd.blog/archives">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1290,7 +2492,9 @@ R12（~部门名~，部门经理）。
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
